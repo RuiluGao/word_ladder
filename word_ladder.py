@@ -40,7 +40,6 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
 
     with open(dictionary_file) as f:
         words = f.readlines()
-
     clean_dic = []
     for word in words:
         clean_dic.append(word.strip('\n'))
