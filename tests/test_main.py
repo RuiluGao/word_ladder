@@ -134,19 +134,19 @@ def test__word_ladder_6():
 
 def test__word_ladder_7():
     ladder = word_ladder('babes','child')
-    assert verify_word_ladder(ladder) and len(ladder)==10
+    assert verify_word_ladder(ladder) and len(ladder)==9
 
 def test__word_ladder_8():
     ladder = word_ladder('child','babes')
-    assert verify_word_ladder(ladder) and len(ladder)==10
+    assert verify_word_ladder(ladder) and len(ladder)==9
 
 def test__word_ladder_9():
     ladder = word_ladder('devil','angel')
-    assert verify_word_ladder(ladder) and len(ladder)==10
+    assert verify_word_ladder(ladder) and len(ladder)==9
 
 def test__word_ladder_10():
     ladder = word_ladder('angel','devil')
-    assert verify_word_ladder(ladder) and len(ladder)==10
+    assert verify_word_ladder(ladder) and len(ladder)==9
 
 def test__word_ladder_11():
     ladder = word_ladder('money','smart')
@@ -188,5 +188,5 @@ def test__word_ladder_fuzz():
         word2 = random.choice(words)
         res1 = word_ladder(word1, word2)
         if res1 is not None:
-            res2 = word_ladder(word1, word2)
+            res2 = word_ladder(word2, word1)
             assert res1 is None and res2 is None or len(res1) == len(res2)
